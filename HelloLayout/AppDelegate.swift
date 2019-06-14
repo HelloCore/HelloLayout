@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Vaccine
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Injection.load(then: applicationDidLoad).add(observer: self,
+                                                     with: #selector(injected(_:)))
         return true
+    }
+    
+    @objc open func injected(_ notification: Notification) {
+        applicationDidLoad()
+        // Add your view hierarchy creation here.
+    }
+    
+    private func applicationDidLoad() {
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.rootViewController = ViewController()
+        window.makeKeyAndVisible()
+        self.window = window
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
