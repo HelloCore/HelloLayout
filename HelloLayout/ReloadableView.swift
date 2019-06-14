@@ -10,12 +10,23 @@ import Vaccine
 
 class ReloadableView: UIView {
     
-    convenience init() {
-        self.init(frame: CGRect.zero)
+    init() {
+        super.init(frame: CGRect.zero)
         addInjection(with: #selector(injected(_:)))
         loadView()
     }
     
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        addInjection(with: #selector(injected(_:)))
+        loadView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        addInjection(with: #selector(injected(_:)))
+        loadView()
+    }
     
     open func loadView() {
         

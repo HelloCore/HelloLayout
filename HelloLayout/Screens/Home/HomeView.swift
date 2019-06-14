@@ -18,7 +18,7 @@ class HomeView: ReloadableView {
             ])
         
         messageLabel.centerInContainer()
-        messageLabel.text = "Hello World"
+        messageLabel.text = "Hello World 1234"
         
         self.backgroundColor = UIColor.white
     }

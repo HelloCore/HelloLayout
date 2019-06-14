@@ -16,6 +16,7 @@
 		8565882022B3AFFD00ABA85F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565881F22B3AFFD00ABA85F /* MainViewController.swift */; };
 		8565882422B3B07100ABA85F /* ReloadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565882322B3B07100ABA85F /* ReloadableView.swift */; };
 		8565882622B3B23A00ABA85F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565882522B3B23A00ABA85F /* BaseViewController.swift */; };
+		8565882A22B3B98F00ABA85F /* WithLeftIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8565882922B3B98F00ABA85F /* WithLeftIcon.swift */; };
 		D9A8237BB19F34B326B6DD80 /* Pods_HelloLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8C7DE67DBD7335EDA2D620 /* Pods_HelloLayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		8565881F22B3AFFD00ABA85F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8565882322B3B07100ABA85F /* ReloadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadableView.swift; sourceTree = "<group>"; };
 		8565882522B3B23A00ABA85F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8565882922B3B98F00ABA85F /* WithLeftIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithLeftIcon.swift; sourceTree = "<group>"; };
 		A190DD0638146AB09A6C88C9 /* Pods-HelloLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloLayout.release.xcconfig"; path = "Target Support Files/Pods-HelloLayout/Pods-HelloLayout.release.xcconfig"; sourceTree = "<group>"; };
 		B7FFD208DCC23E9002801062 /* Pods-HelloLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloLayout.debug.xcconfig"; path = "Target Support Files/Pods-HelloLayout/Pods-HelloLayout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 		855E102722B3823E003E6FDF /* HelloLayout */ = {
 			isa = PBXGroup;
 			children = (
+				8565882822B3B97600ABA85F /* CustomViews */,
 				8565881522B3AFAD00ABA85F /* Screens */,
 				855E102822B3823E003E6FDF /* AppDelegate.swift */,
 				855E102F22B38240003E6FDF /* Assets.xcassets */,
@@ -114,6 +117,14 @@
 				8565881F22B3AFFD00ABA85F /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		8565882822B3B97600ABA85F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8565882922B3B98F00ABA85F /* WithLeftIcon.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		F4CC52CC20A02014AB8B6987 /* Frameworks */ = {
@@ -242,6 +253,7 @@
 				855E102922B3823E003E6FDF /* AppDelegate.swift in Sources */,
 				8565882022B3AFFD00ABA85F /* MainViewController.swift in Sources */,
 				8565881E22B3AFF000ABA85F /* MainView.swift in Sources */,
+				8565882A22B3B98F00ABA85F /* WithLeftIcon.swift in Sources */,
 				8565882622B3B23A00ABA85F /* BaseViewController.swift in Sources */,
 				8565881D22B3AFF000ABA85F /* HomeViewController.swift in Sources */,
 			);

@@ -15,28 +15,29 @@ class MainView: ReloadableView {
     let loginButton = UIButton(type: UIButton.ButtonType.roundedRect)
     
     override func loadView() {
+        let usernameLayout = WithLeftIcon(icon: UIImage(named: "avatar")!, child: usernameTextField)
+        let passwordLayout = WithLeftIcon(icon: UIImage(named: "padlock")!, child: passwordTextField)
+        
         sv([
-            usernameTextField,
-            passwordTextField,
+            usernameLayout,
+            passwordLayout,
             loginButton
             ])
         
         layout([
             120,
-            |-30-usernameTextField-30-|,
+            |-30-usernameLayout-30-| ~ 40,
             5,
-            |-30-passwordTextField-30-|,
+            |-30-passwordLayout-30-| ~ 40,
             5,
             |-30-loginButton-30-|
             ])
         
         self.backgroundColor = UIColor.white
         usernameTextField.placeholder = "Username"
-        usernameTextField.borderStyle = .roundedRect
         
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.borderStyle = .roundedRect
         
         loginButton.setTitle("Login", for: UIControl.State.normal)
     }
