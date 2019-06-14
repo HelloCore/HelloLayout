@@ -16,23 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Injection.load(then: applicationDidLoad).add(observer: self,
-                                                     with: #selector(injected(_:)))
+        Injection.load().load(then: nil, swizzling: false, animations: false)
+        
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let navVC = UINavigationController(rootViewController: MainViewController())
+        window.rootViewController = navVC
+        window.makeKeyAndVisible()
+        self.window = window
+        
         return true
     }
     
     @objc open func injected(_ notification: Notification) {
-        applicationDidLoad()
         // Add your view hierarchy creation here.
     }
     
-    private func applicationDidLoad() {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = ViewController()
-        window.makeKeyAndVisible()
-        self.window = window
-    }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

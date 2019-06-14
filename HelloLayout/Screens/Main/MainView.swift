@@ -8,15 +8,13 @@
 import UIKit
 import Stevia
 
-class MainView: UIView {
+class MainView: ReloadableView {
     
     let usernameTextField = UITextField()
     let passwordTextField = UITextField()
     let loginButton = UIButton(type: UIButton.ButtonType.roundedRect)
     
-    convenience init() {
-        self.init(frame: CGRect.zero)
-        
+    override func loadView() {
         sv([
             usernameTextField,
             passwordTextField,
@@ -24,7 +22,7 @@ class MainView: UIView {
             ])
         
         layout([
-            100,
+            120,
             |-30-usernameTextField-30-|,
             5,
             |-30-passwordTextField-30-|,
