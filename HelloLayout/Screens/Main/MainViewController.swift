@@ -40,6 +40,8 @@ class MainViewController: BaseViewController {
     }
     
     override func loadView() {
+        super.loadView()
+        
         mainView = MainView()
         self.view = mainView
         self.reloadUI()

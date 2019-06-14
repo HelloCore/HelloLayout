@@ -6,29 +6,21 @@
 //
 
 import UIKit
-import Vaccine
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         // Override point for customization after application launch.
-        Injection.load().load(then: nil, swizzling: false, animations: false)
-        
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let navVC = UINavigationController(rootViewController: MainViewController())
-        window.rootViewController = navVC
-        window.makeKeyAndVisible()
-        self.window = window
-        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let mainVC = MainViewController()
+        window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        window?.makeKeyAndVisible()
+
         return true
-    }
-    
-    @objc open func injected(_ notification: Notification) {
-        // Add your view hierarchy creation here.
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

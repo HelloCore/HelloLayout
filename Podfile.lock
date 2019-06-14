@@ -1,20 +1,16 @@
 PODS:
-  - SteviaLayout (4.5.0)
-  - Vaccine (0.15.1)
+  - SteviaLayout (4.4.3)
 
 DEPENDENCIES:
   - SteviaLayout
-  - Vaccine
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SteviaLayout
-    - Vaccine
 
 SPEC CHECKSUMS:
-  SteviaLayout: aa64a62810544348c9e328a6521cb9160fa82ec6
-  Vaccine: 9597d99f45c18f331f2c5246c0483bbe5ed119fe
+  SteviaLayout: ae5ee66101e03607a93c9b3773b84ab7ba7b3d17
 
-PODFILE CHECKSUM: ed64333ad2d3bef4cd2dd08369e513e5586a094a
+PODFILE CHECKSUM: 6db0f6368c5e827a8512a325121c605f8168178f
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.6.0

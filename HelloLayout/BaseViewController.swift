@@ -6,18 +6,18 @@
 //
 
 import UIKit
-import Vaccine
 
 class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Injection.add(observer: self, with: #selector(reloaded(_:)))
-
+        on("INJECTION_BUNDLE_NOTIFICATION") { [weak self] in
+            self?.reloaded()
+        }
         // Do any additional setup after loading the view.
     }
     
-    @objc open func reloaded(_ notification: Notification) {
+    open func reloaded() {
         loadView()
     }
 

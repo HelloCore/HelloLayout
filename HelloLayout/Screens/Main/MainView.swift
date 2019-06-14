@@ -29,7 +29,7 @@ class MainView: ReloadableView {
             |-30-usernameLayout-30-| ~ 40,
             5,
             |-30-passwordLayout-30-| ~ 40,
-            5,
+            20,
             |-30-loginButton-30-|
             ])
         
